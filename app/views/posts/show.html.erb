@@ -1,0 +1,11 @@
+	<div class="selfpost">
+		<h1><%= simple_format @post.title %></h1>
+	</div>
+
+	<div class="postbody">
+		<p><%= simple_format @post.body %></p>
+	</div>
+
+	<div class="midstrip">
+		<h2><i><%= @post.created_at.strftime("%A %B %d"", ""%Y") %></i></h2>
+	</div>

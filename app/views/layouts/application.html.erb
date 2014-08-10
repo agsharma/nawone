@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "NerdsAtWar" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "NerdsAtWar" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.ico' %>
+  </head>
+  <body>
+    <div class="topstrip"></div>
+    <div class="header">
+      <%= render 'layouts/navigation' %>
+    </div>
+    <div class="container">
+      <div class="logoarea">
+        <div class="sitelogo">
+          <%= link_to '<i class="fa fa-shield"></i>'.html_safe, root_path %>
+        </div>
+        <div class="sitetitle">
+          <strong>Nerds at War</strong>
+        </div>
+        <div class="siteauthor">
+          by Abhishek Dutt
+        </div>
+        <div class="disclaimer">
+          <p>Opinions expressed are solely my own and do not express the views or opinions of my employer.</p>
+        </div>
+      </div>
+      <div class="posts">
+        <%= render 'layouts/messages' %>
+        <%= yield %>      
+      </div>
+      <div class="footer">
+        <p>&copy; NerdsAtWar.com 2014</p>
+      </div>
+    </div>
+  </body>
+</html>

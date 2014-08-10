@@ -1,0 +1,34 @@
+<% @posts_by_month.each do |todaydate, posts| %>
+	<% if todaydate != Date.today.strftime("%A %B %d"", ""%Y") %>
+		<div class="midstrip">
+			<h2><%= todaydate %></h2> 
+		</div>
+	<% end %>
+	<% posts.each do |post| %>
+		<% if post.post_type.name == "Self" %>
+			<hr class="selfseperator">
+			<div class="selfpost">
+				<h1>
+					<%= link_to post.title, post, { :title => "Permanent link to '#{post.title}'." } %>
+				</h1>
+				<h6>
+					<%= post.created_at.strftime("%A %B %d"", ""%Y") %>
+				</h6>
+				<div id="selfbody">
+					<p><%= simple_format post.body %></p>
+				</div>
+			</div>
+			<hr class="selfseperator">
+		<% else %>
+			<div class="standardpost">
+				<h2>
+					<%= link_to post.title, "#{post.article_url}" %>
+					<%= link_to '<i class="fa fa-shield"></i>'.html_safe, post, { :title => "Permanent link to '#{post.title}'.", :class => "permalink" } %>
+				</h2>
+				<div id="postbody">
+					<p><%= simple_format post.body %></p>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+<% end %>

@@ -1,0 +1,95 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.posts {
+	line-height: 1.6em;
+	font-family: Verdana, "Bitstream Vera Sans", sans-serif;
+	text-align: left;
+	font-weight: normal;
+	margin: 0 0 .4em 0;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+.posts > .midstrip > h2{
+	margin: 5em 0 2em 0;
+	font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Georgia, serif;
+	font-size: 14px;
+	line-height: 1.8em;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	color: #b9c1c8;
+}
+
+.selfpost {
+	margin-bottom: 1em;
+	margin-top: 3.5em;
+}
+
+.standardpost {
+	margin-bottom: 1em;
+	margin-top: 3.5em;
+}
+
+.posts > .selfpost > h1 {
+	font: 16px/40px 'Avenir Next LT W02 Demi', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+	font-weight: bold;
+	margin-left: 0;
+}
+
+.posts > .standardpost > h2 {
+	font: 'Avenir Next LT W02 Demi', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+	font-size: 14px;
+	line-height: 23px;
+	font-weight: bold;
+	margin-left: 0;
+}
+
+.permalink {
+	color: #afb5bb;
+}
+
+.permalink a:hover { 
+	color: #99A0A8;
+}
+
+.posts > .standardpost > h2 > .permalink {
+	border: 0;
+	padding: 3px;
+	margin-left: .5em;
+	font-size: 12px;
+}
+
+#postbody {
+	margin: auto auto 2em 1em;
+}
+
+.posts blockquote {
+	margin: 1em 1em 1em 1em;
+	font-size: 1em;
+	padding: 0 .75em 0 1em;
+	border-left: 1px solid #55606e;
+	border-right: 0px;
+	color: #66707C;
+}
+
+.selfpost hr:after {
+	content: "···";
+	letter-spacing: 2em;
+}
+hr.selfseperator:after {
+	content: "··•··";
+	letter-spacing: 1.5em;
+	}
+
+hr.selfseperator {
+	color: #afb5bb;
+	text-align: center;
+	border-color: #777;
+	margin: 7em 0 7em 0;
+	padding-right: 2em;
+	height: 0;
+	border-width: 0;
+	background-color: inherit;
+}

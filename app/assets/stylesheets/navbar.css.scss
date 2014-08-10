@@ -1,0 +1,71 @@
+.topstrip {
+  height: 4px;
+  background-color: #55606e !important;
+}
+
+.navbar {
+	margin: 0;
+	background-color: inherit;
+	color: #b9c1c8 !important;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.navbar .nav > li > a {
+  float: none;
+  color:  #b9c1c8;
+  font-size: 14px;
+	font-family: "Gill Sans", "Gill Sans Std", "Gill Sans MT", Verdana, "Bitstream Vera Sans", sans-serif;
+	letter-spacing: 2px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-bottom: 0;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+	.navbar {
+		min-height: 40px;
+		max-height: 40px;
+		line-height: 40px;
+	}
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.navbar {
+		min-height: 40px;
+		max-height: 40px;
+		line-height: 40px;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	.navbar {
+		min-height: 40px;
+		max-height: 40px;
+		line-height: 40px;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+}
+
+.navbar-inner {
+  text-align:center;
+}
+
+.navbar .nav,
+.navbar .nav > li {
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
+}

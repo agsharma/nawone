@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value
+
+# == Schema Information
+#
+# Table name: site_authors
+#
+#  id             :integer          not null, primary key
+#  fullname       :string(255)      not null
+#  naw_email      :string(255)      not null
+#  personal_email :string(255)      not null
+#  personal_phone :integer
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+# Indexes
+#
+#  index_site_authors_on_fullname   (fullname)
+#  index_site_authors_on_naw_email  (naw_email)
+#
